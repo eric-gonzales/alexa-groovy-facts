@@ -1,18 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('First') {
+    stage('') {
       steps {
-        parallel(
-          "First": {
-            sh 'echo "Hey"'
-            
-          },
-          "Testing": {
-            echo 'Hello'
-            
-          }
-        )
+        build 'Grails_Unit_Test_X'
       }
     }
   }
